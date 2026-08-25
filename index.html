@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gestión Táctica — Bomberos Voluntarios de Pilar</title>
+<meta name="theme-color" content="#0B0F14">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon.svg">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Pantalla de arranque / recuperación / creación de incidente -->
+<div id="gate" class="gate">
+  <div class="gate-card" id="gateCard"></div>
+</div>
+
+<!-- Shell principal -->
+<div id="appShell" class="app-shell">
+  <div class="topbar">
+    <div class="topbar-id">
+      <div class="nombre" id="topIncidentName">—</div>
+      <div class="cuartel" id="topCuartel">—</div>
+    </div>
+    <div class="topbar-right">
+      <div class="water-chip" id="waterChip">💧 0 L</div>
+      <div class="save-indicator" id="saveIndicator"><span class="dot"></span>Guardado</div>
+    </div>
+  </div>
+
+  <div class="nav" id="mainNav">
+    <button class="nav-btn active" data-view="tablero">🗺️ TABLERO</button>
+    <button class="nav-btn" data-view="recursos">🚒 RECURSOS</button>
+    <button class="nav-btn" data-view="historial">📜 HISTORIAL</button>
+    <button class="nav-btn" data-view="informe">📋 INFORME</button>
+  </div>
+
+  <div class="view active" id="view-tablero"></div>
+  <div class="view" id="view-recursos"></div>
+  <div class="view" id="view-historial"></div>
+  <div class="view" id="view-informe"></div>
+
+  <button class="fab-add" id="fabAdd" title="Agregar recurso">+</button>
+</div>
+
+<div id="modalRoot"></div>
+<div id="toast" class="toast"></div>
+
+<script src="js/db.js"></script>
+<script src="js/state.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
